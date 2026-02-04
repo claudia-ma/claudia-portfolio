@@ -1,0 +1,158 @@
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.head {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.muted {
+  margin: 0;
+  color: #6b7280;
+  max-width: 75ch;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 14px;
+  background: #fff;
+  display: grid;
+  gap: 10px;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.pill {
+  font-size: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #111827;
+  background: #fff;
+  white-space: nowrap;
+}
+
+.desc {
+  margin: 0;
+  color: #374151;
+}
+
+.meta {
+  color: #6b7280;
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.btn {
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 1px solid #111827;
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.btn.ghost {
+  background: #fff;
+  color: #111827;
+  border-color: #e5e7eb;
+}
+
+@media (max-width: 960px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+}
+
+.btn.pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:34px;
+  padding:0 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.btn.pill:hover{
+  transform: translateY(-1px);
+  background: rgba(0,0,0,.03);
+}
+
+.btn.pill.primary{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn.pill.primary:hover{
+  background: var(--accent);
+  filter: brightness(1.05);
+}
+
+.btn.pill.disabled{
+  opacity:.6;
+  cursor: default;
+  pointer-events: none;
+  background: rgba(0,0,0,.03);
+}

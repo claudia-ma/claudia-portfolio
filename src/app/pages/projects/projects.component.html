@@ -1,0 +1,57 @@
+<main class="wrap">
+  <header class="head">
+    <h1>Proyectos</h1>
+    <p class="muted">
+      Tres proyectos completos, pensados para mostrar producto real: UI + lógica + estructura.
+    </p>
+  </header>
+
+  <section class="grid">
+    <article class="card" *ngFor="let p of projects; trackBy: trackById">
+      <div class="top">
+        <h3>{{ p.name }}</h3>
+        <span class="pill">{{ stackLabel(p) }}</span>
+      </div>
+
+      <p class="desc">{{ p.tagline }}</p>
+
+      <div class="meta">
+        <span>{{ p.role }}</span>
+      </div>
+
+      <div class="actions">
+  <!-- Detalle -->
+  <a [routerLink]="['/projects', p.id]">Ver detalles →</a>
+
+  <!-- Demo -->
+  <a
+    class="btn ghost"
+    *ngIf="p.links?.live"
+    [href]="p.links?.live"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Demo
+  </a>
+
+  <!-- Código SOLO si no es Zimbabwe -->
+  <a
+    class="btn ghost"
+    *ngIf="p.id !== 'zimbabwe' && p.links?.repo"
+    [href]="p.links?.repo"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Código
+  </a>
+
+  <!-- En progreso SOLO para Zimbabwe -->
+  <span
+    class="badge muted"
+    *ngIf="p.id === 'zimbabwe'"
+  >
+    En progreso · 2026
+  </span>
+</div>
+
+      
