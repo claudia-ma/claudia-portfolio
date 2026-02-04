@@ -1,59 +1,69 @@
-# ClaudiaPortfolio
+# Claudia Aguilar – Frontend Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+Portfolio personal enfocado a **Frontend Development con Angular**, creado para mostrar proyectos reales, estructura de código y criterio de UI/UX.
 
-## Development server
+El objetivo del portfolio es presentar **producto funcional**, no demos aisladas.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Proyectos destacados
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 🧠 TeamPulse
+**Gestión interna con autenticación, roles y tareas conectadas a API real**
 
-## Code scaffolding
+- Login con token (Laravel Sanctum)
+- Listado de tareas con filtros y actualización de estado (PATCH)
+- Feedback UX: loading, errores, estados vacíos
+- Arquitectura clara orientada a producto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+**Stack:** Angular · Laravel API · Sanctum · MySQL/SQLite  
+👉 Repositorio: https://github.com/claudia-ma/teampulse-app
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🗂 MiniCMS
+**Panel administrativo tipo CMS con CRUD completo**
 
-```bash
-ng generate --help
-```
+- Crear, editar, eliminar y listar contenidos
+- Formularios con validación y mensajes de error
+- Componentes reutilizables y estructura escalable
+- UX sencilla para tareas administrativas reales
 
-## Building
+**Stack:** Angular · TypeScript · Routing · Forms  
+👉 Repositorio: https://github.com/claudia-ma/minicms
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+### 🎨 Reino Zimbabwe
+**Proyecto frontend visual con foco en UI y microinteracciones**
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Diseño responsive
+- Jerarquía visual y composición cuidada
+- Detalles de interacción (hover, scroll, animaciones)
+- Código HTML/CSS limpio y estructurado
 
-## Running unit tests
+🛠 **Estado:** En progreso (2026)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 🧩 Tech Stack principal
 
-## Running end-to-end tests
+- Angular (standalone components)
+- TypeScript
+- HTML5 / CSS3
+- Consumo de APIs REST
+- Git & GitHub
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## 👩‍💻 Perfil
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Frontend developer junior con enfoque en:
+- Código limpio y mantenible
+- Experiencia de usuario
+- Estructura y escalabilidad
+- Proyectos reales, no ejercicios aislados
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+© 2026 · Claudia Aguilar
