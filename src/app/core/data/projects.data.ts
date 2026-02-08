@@ -55,17 +55,19 @@ links: {
   {
   id: 'zimbabwe',
   name: 'Reino Zimbabwe',
-  tagline: 'Landing visual e interactiva · UI/UX en evolución',
+  tagline: 'Landing profesional para criadero: diseño, UI y estructura real.',
   description:
-    'Proyecto centrado en frontend visual y narrativa: composición cuidada, secciones con identidad y microinteracciones. Actualmente en proceso de mejora y refactorización (2026).',
-  stack: ['HTML', 'CSS', 'JavaScript', 'Responsive UI'],
+    'Landing web desarrollada como proyecto real para cliente: estructura clara por secciones, UI cuidada, responsive completo y código organizado. Pensado para mostrar criterio visual y capacidad de ejecución frontend.',
+  stack: ['HTML', 'CSS', 'JavaScript'],
   highlights: [
-    'Diseño visual fuerte + layout responsive',
-    'Microinteracciones (hover y animaciones)',
-    'Narrativa por secciones y jerarquía visual clara',
-    'Proyecto en mejora y refactorización (2026)',
+    'Landing real orientada a cliente',
+    'Diseño responsive y jerarquía visual clara',
+    'Secciones estructuradas + UI consistente',
+    'Código limpio y mantenible',
   ],
   role: 'Frontend UI (diseño + implementación)',
-  links: {},
+  links: {
+    repo: 'https://github.com/claudia-ma/reino-zimbabwe',
+  },
 },
 ];

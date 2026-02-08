@@ -20,10 +20,10 @@
       </div>
 
       <div class="actions">
-  <!-- Detalle -->
+  <!-- Detalle siempre -->
   <a [routerLink]="['/projects', p.id]">Ver detalles →</a>
 
-  <!-- Demo -->
+  <!-- Live -->
   <a
     class="btn ghost"
     *ngIf="p.links?.live"
@@ -34,24 +34,17 @@
     Demo
   </a>
 
-  <!-- Código SOLO si no es Zimbabwe -->
+  <!-- Repo -->
   <a
     class="btn ghost"
-    *ngIf="p.id !== 'zimbabwe' && p.links?.repo"
+    *ngIf="p.links?.repo"
     [href]="p.links?.repo"
     target="_blank"
     rel="noreferrer"
   >
     Código
   </a>
-
-  <!-- En progreso SOLO para Zimbabwe -->
-  <span
-    class="badge muted"
-    *ngIf="p.id === 'zimbabwe'"
-  >
-    En progreso · 2026
-  </span>
 </div>
+      
 
       
