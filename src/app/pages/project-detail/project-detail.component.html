@@ -1,6 +1,5 @@
 <main class="wrap" *ngIf="project() as p; else notFound">
-  <a class="back" routerLink="/projects">← Volver a proyectos</a>
-
+  <a class="back" routerLink="/projects">← Back to projects</a>
 
   <header class="header">
     <div>
@@ -9,55 +8,68 @@
     </div>
 
     <div class="links" *ngIf="p.links">
-      <a class="btn ghost" *ngIf="p.links?.repo?.length" [href]="p.links.repo" target="_blank" rel="noreferrer">
+      <a
+        class="btn ghost"
+        *ngIf="p.links?.repo?.length"
+        [href]="p.links.repo"
+        target="_blank"
+        rel="noreferrer"
+      >
         Repo
       </a>
-      <a class="btn" *ngIf="p.links.live" [href]="p.links.live" target="_blank" rel="noreferrer">
-        Ver demo
+
+      <a
+        class="btn"
+        *ngIf="p.links.live"
+        [href]="p.links.live"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Live demo
       </a>
     </div>
   </header>
 
   <section class="grid">
-  <article class="card">
-    <h2>Resumen</h2>
-    <p class="desc">{{ p.description }}</p>
-  </article>
+    <article class="card">
+      <h2>Overview</h2>
+      <p class="desc">{{ p.description }}</p>
+    </article>
 
-  <article class="card">
-    <h2>Stack</h2>
-    <ul class="list">
-      <li *ngFor="let s of p.stack">{{ s }}</li>
-    </ul>
-  </article>
+    <article class="card">
+      <h2>Tech stack</h2>
+      <ul class="list">
+        <li *ngFor="let s of p.stack">{{ s }}</li>
+      </ul>
+    </article>
 
-  <article class="card">
-    <h2>Highlights</h2>
-    <ul class="list">
-      <li *ngFor="let h of p.highlights">{{ h }}</li>
-    </ul>
-  </article>
+    <article class="card">
+      <h2>Highlights</h2>
+      <ul class="list">
+        <li *ngFor="let h of p.highlights">{{ h }}</li>
+      </ul>
+    </article>
 
-  <article class="card">
-    <h2>Mi rol</h2>
-    <p class="desc">{{ p.role }}</p>
-  </article>
+    <article class="card">
+      <h2>My role</h2>
+      <p class="desc">{{ p.role }}</p>
+    </article>
 
-  <!-- ✅ AQUÍ -->
-  <article class="card" *ngIf="p.id === 'teampulse'">
-    <h2>Decisiones técnicas</h2>
-    <ul class="list">
-      <li>Auth real con Sanctum + interceptor Bearer token</li>
-      <li>UX: loading/errors y updates optimistas en tareas</li>
-    </ul>
-  </article>
-</section>
+    <!-- ✅ ONLY FOR TEAMPULSE -->
+    <article class="card" *ngIf="p.id === 'teampulse'">
+      <h2>Technical decisions</h2>
+      <ul class="list">
+        <li>Real authentication with Sanctum + global Bearer token interceptor</li>
+        <li>UX-focused states: loading/errors and optimistic updates for tasks</li>
+      </ul>
+    </article>
+  </section>
 </main>
 
 <ng-template #notFound>
   <main class="wrap">
-    <h1>Proyecto no encontrado</h1>
-    <p class="muted">Vuelve al listado y selecciona uno válido.</p>
-    <a class="btn" routerLink="/projects">Volver</a>
+    <h1>Project not found</h1>
+    <p class="muted">Go back to the list and select a valid project.</p>
+    <a class="btn" routerLink="/projects">Back</a>
   </main>
 </ng-template>

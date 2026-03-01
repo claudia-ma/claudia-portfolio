@@ -1,8 +1,8 @@
 <main class="wrap">
   <header class="head">
-    <h1>Proyectos</h1>
+    <h1>Projects</h1>
     <p class="muted">
-      Tres proyectos completos, pensados para mostrar producto real: UI + lógica + estructura.
+      Three complete projects designed to showcase real product work: UI + logic + structure.
     </p>
   </header>
 
@@ -20,31 +20,31 @@
       </div>
 
       <div class="actions">
-  <!-- Detalle siempre -->
-  <a [routerLink]="['/projects', p.id]">Ver detalles →</a>
+        <!-- Details always -->
+        <a [routerLink]="['/projects', p.id]">View details →</a>
 
-  <!-- Live -->
-  <a
-    class="btn ghost"
-    *ngIf="p.links?.live"
-    [href]="p.links?.live"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Demo
-  </a>
+        <!-- Live -->
+        <a
+          class="btn ghost"
+          *ngIf="p.links?.live"
+          [href]="p.links?.live"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Demo
+        </a>
 
-  <!-- Repo -->
-  <a
-    class="btn ghost"
-    *ngIf="p.links?.repo"
-    [href]="p.links?.repo"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Código
-  </a>
-</div>
-      
-
-      
+        <!-- Repo -->
+        <a
+          class="btn ghost"
+          *ngIf="p.links?.repo"
+          [href]="p.links?.repo"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Code
+        </a>
+      </div>
+    </article>
+  </section>
+</main>

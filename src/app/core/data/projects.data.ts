@@ -17,59 +17,68 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-  {
-  id: "teampulse",
-  name: "TeamPulse",
-  tagline: "Internal task management SaaS with real auth, roles-ready architecture and a Laravel API.",
-  description:
-    "SaaS-style internal dashboard: login via Laravel Sanctum, protected routes, task CRUD with filters, reactive UI and strong UX handling (loading/errors).",
-  stack: ["Angular (Standalone)", "TypeScript", "RxJS", "Laravel API", "Sanctum", "MySQL/SQLite"],
-  highlights: [
-    "Real auth + token persisted in localStorage",
-    "HTTP interceptor injecting Bearer token",
-    "Protected routes (auth guard)",
-    "Tasks: CRUD + filters + status update (PATCH) with optimistic UI",
-    "Responsive mobile UI (topbar + touch-friendly controls)"
-  ],
-  role: "Frontend-focused (integrated with a real backend API).",
-  links: {
-    repo: "https://github.com/claudia-ma/teampulse"
-  }
-},
-    {
-  id: 'minicms',
-name: 'MiniCMS',
-tagline: 'Panel tipo CMS con CRUD y estructura clara.',
-description:
-  'Panel administrativo orientado a orden y escalabilidad: CRUD completo con formularios, validación y una estructura modular fácil de mantener. Enfocado a un flujo real de “gestionar contenido/datos” con UX simple.',
-stack: ['Angular (standalone)', 'TypeScript', 'Routing', 'Forms', 'CSS (custom)'],
-highlights: [
-  'CRUD completo (crear, editar, borrar, listar)',
-  'Validación de formularios + mensajes de error',
-  'Estructura modular y componentes reutilizables',
-  'UX limpia: estados vacíos + feedback visual',
-],
-role: 'Frontend-focused (arquitectura y UX de panel)',
-links: {
-  repo: 'https://github.com/claudia-ma/minicms'
-},
-},
-  {
-  id: 'zimbabwe',
-  name: 'Reino Zimbabwe',
-  tagline: 'Landing profesional para criadero: diseño, UI y estructura real.',
-  description:
-    'Landing web desarrollada como proyecto real para cliente: estructura clara por secciones, UI cuidada, responsive completo y código organizado. Pensado para mostrar criterio visual y capacidad de ejecución frontend.',
-  stack: ['HTML', 'CSS', 'JavaScript'],
-  highlights: [
-    'Landing real orientada a cliente',
-    'Diseño responsive y jerarquía visual clara',
-    'Secciones estructuradas + UI consistente',
-    'Código limpio y mantenible',
-  ],
-  role: 'Frontend UI (diseño + implementación)',
-  links: {
-    repo: 'https://github.com/claudia-ma/reino-zimbabwe',
+    id: "teampulse",
+    name: "TeamPulse",
+    tagline:
+      "SaaS-style internal task management with real authentication and API integration.",
+    description:
+      "Product-oriented internal dashboard featuring Laravel Sanctum authentication, protected routes, full task CRUD with filters, reactive state management, and strong UX handling for loading and error states.",
+    stack: [
+      "Angular (Standalone)",
+      "TypeScript",
+      "RxJS",
+      "Laravel API",
+      "Sanctum",
+      "MySQL/SQLite",
+    ],
+    highlights: [
+      "Real authentication with token persistence (localStorage)",
+      "HTTP interceptor injecting Bearer token",
+      "Route protection via Auth Guard",
+      "Task management: CRUD + filters + status updates (PATCH) with optimistic UI",
+      "Fully responsive mobile experience (topbar + touch-friendly controls)",
+    ],
+    role: "Frontend-focused developer integrating with a real backend API.",
+    links: {
+      repo: "https://github.com/claudia-ma/teampulse",
+    },
   },
-},
+
+  {
+    id: "minicms",
+    name: "MiniCMS",
+    tagline: "Admin dashboard with full CRUD and a scalable modular architecture.",
+    description:
+      "Administrative panel built with scalability and maintainability in mind: full CRUD operations, structured routing, reusable components, and clear UX patterns for managing structured content and data.",
+    stack: ["Angular (Standalone)", "TypeScript", "Routing", "Forms", "Custom CSS"],
+    highlights: [
+      "Complete CRUD operations (create, read, update, delete)",
+      "Form validation with structured error handling",
+      "Modular architecture with reusable components",
+      "Clean UX: empty states and visual feedback patterns",
+    ],
+    role: "Frontend-focused (dashboard architecture and user experience design).",
+    links: {
+      repo: "https://github.com/claudia-ma/minicms",
+    },
+  },
+
+  {
+    id: "zimbabwe",
+    name: "Reino Zimbabwe",
+    tagline: "Client-oriented landing page with strong UI structure and visual consistency.",
+    description:
+      "Frontend project developed as a real client-style landing page: clear information hierarchy, polished UI, full responsiveness, and maintainable code structure. Designed to demonstrate visual judgment and execution quality.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    highlights: [
+      "Real-world client-style landing structure",
+      "Fully responsive design with clear visual hierarchy",
+      "Consistent UI components and section architecture",
+      "Clean and maintainable frontend code",
+    ],
+    role: "Frontend UI development (design implementation and structure).",
+    links: {
+      repo: "https://github.com/claudia-ma/reino-zimbabwe",
+    },
+  },
 ];
