@@ -17,23 +17,25 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    id: 'teampulse',
-    name: 'TeamPulse',
-    tagline: 'Gestión interna con auth, roles y tareas conectadas a API real.',
-    description:
-      'App enfocada a producto: login con Sanctum, listado de tareas con filtros y actualización de estado (PATCH), feedback UX (loading/errors) y estructura limpia.',
-    stack: ['Angular (standalone)', 'Laravel API', 'Sanctum', 'MySQL/SQLite'],
-    highlights: [
-      'Auth real + token en interceptor',
-      'Tasks: GET + PATCH (optimistic UI)',
-      'Orden por fecha + etiquetas “Vence hoy/mañana”',
-      'Código limpio para recruiters',
-    ],
-    role: 'Frontend-focused (con backend API real)',
-    links: {
-      repo: 'https://github.com/claudia-ma/teampulse-app',
-    }
-  },
+  {
+  id: "teampulse",
+  name: "TeamPulse",
+  tagline: "Internal task management SaaS with real auth, roles-ready architecture and a Laravel API.",
+  description:
+    "SaaS-style internal dashboard: login via Laravel Sanctum, protected routes, task CRUD with filters, reactive UI and strong UX handling (loading/errors).",
+  stack: ["Angular (Standalone)", "TypeScript", "RxJS", "Laravel API", "Sanctum", "MySQL/SQLite"],
+  highlights: [
+    "Real auth + token persisted in localStorage",
+    "HTTP interceptor injecting Bearer token",
+    "Protected routes (auth guard)",
+    "Tasks: CRUD + filters + status update (PATCH) with optimistic UI",
+    "Responsive mobile UI (topbar + touch-friendly controls)"
+  ],
+  role: "Frontend-focused (integrated with a real backend API).",
+  links: {
+    repo: "https://github.com/claudia-ma/teampulse"
+  }
+},
     {
   id: 'minicms',
 name: 'MiniCMS',
