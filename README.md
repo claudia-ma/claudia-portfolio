@@ -42,7 +42,8 @@ El objetivo del portfolio es presentar **producto funcional**, no demos aisladas
 - Detalles de interacción (hover, scroll, animaciones)
 - Código HTML/CSS limpio y estructurado
 
-🛠 **Estado:** En progreso (2026)
+**Stack:**   HTML · CSS · JavaScript
+👉 Repositorio: https://github.com/claudia-ma/reinozimbabwe
 
 ---
 
