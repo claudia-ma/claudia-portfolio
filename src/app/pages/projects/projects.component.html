@@ -1,50 +1,58 @@
 <main class="wrap">
-  <header class="head">
-    <h1>Projects</h1>
-    <p class="muted">
-      Three complete projects designed to showcase real product work: UI + logic + structure.
-    </p>
-  </header>
 
+  <!-- HEADER -->
+  <section class="hero">
+    <p class="eyebrow">Frontend Developer · Angular · Laravel</p>
+    <h1>Hi, I’m Claudia.</h1>
+    <p class="intro">
+      I build clean, functional interfaces connected to real APIs. 
+      Here are my strongest projects: Zimbabwe, MiniCMS, and TeamPulse.
+    </p>
+
+    <div class="actions">
+      <a routerLink="/projects" class="btn">View projects</a>
+      <a href="/assets/cv.pdf" class="btn ghost" download>Download CV</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
   <section class="grid">
-    <article class="card" *ngFor="let p of projects; trackBy: trackById">
+    <article
+      class="card"
+      *ngFor="let p of projects; trackBy: trackById"
+    >
+      <!-- IMAGE -->
+      <img
+        *ngIf="p.image"
+        [src]="p.image"
+        [alt]="p.name"
+        class="project-image"
+      />
+
+      <!-- TITLE + STACK -->
       <div class="top">
         <h3>{{ p.name }}</h3>
         <span class="pill">{{ stackLabel(p) }}</span>
       </div>
 
-      <p class="desc">{{ p.tagline }}</p>
+      <!-- TAGLINE -->
+      <p>{{ p.tagline }}</p>
 
-      <div class="meta">
-        <span>{{ p.role }}</span>
-      </div>
-
-      <div class="actions">
-        <!-- Details always -->
+      <!-- ACTIONS -->
+      <div class="card-actions">
         <a [routerLink]="['/projects', p.id]">View details →</a>
 
-        <!-- Live -->
         <a
-          class="btn ghost"
-          *ngIf="p.links?.live"
-          [href]="p.links?.live"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Demo
-        </a>
-
-        <!-- Repo -->
-        <a
-          class="btn ghost"
           *ngIf="p.links?.repo"
           [href]="p.links?.repo"
           target="_blank"
           rel="noreferrer"
+          class="code-btn"
         >
           Code
         </a>
       </div>
     </article>
   </section>
+
 </main>

@@ -1,75 +1,110 @@
 <main class="wrap" *ngIf="project() as p; else notFound">
+
+  <!-- BACK -->
   <a class="back" routerLink="/projects">← Back to projects</a>
 
+  <!--  HEADER -->
   <header class="header">
     <div>
       <h1>{{ p.name }}</h1>
       <p class="tagline">{{ p.tagline }}</p>
     </div>
 
-    <div class="links" *ngIf="p.links">
+    <div class="actions">
       <a
-        class="btn ghost"
-        *ngIf="p.links?.repo?.length"
-        [href]="p.links.repo"
+        class="btn"
+        *ngIf="p.links?.repo"
+        [href]="p.links?.repo"
         target="_blank"
         rel="noreferrer"
       >
-        Repo
+        View on GitHub
       </a>
 
       <a
-        class="btn"
-        *ngIf="p.links.live"
-        [href]="p.links.live"
+        class="btn ghost"
+        *ngIf="p.links?.live"
+        [href]="p.links?.live"
         target="_blank"
         rel="noreferrer"
       >
-        Live demo
+        Live
       </a>
     </div>
   </header>
 
+  <!-- HERO -->
+  <div class="hero-wrapper" *ngIf="p.image">
+    <img
+      [src]="p.image"
+      [alt]="p.name"
+      class="hero-image"
+    />
+  </div>
+
+  <!-- GALERÍA -->
+  <div class="gallery" *ngIf="p.screens?.length">
+    <img
+      *ngFor="let img of p.screens"
+      [src]="img"
+      alt="screenshot"
+    />
+  </div>
+
+  <!-- BLOQUES PRINCIPALES -->
   <section class="grid">
+
+    <!-- Overview -->
     <article class="card">
-      <h2>Overview</h2>
-      <p class="desc">{{ p.description }}</p>
+      <h3>Project overview</h3>
+      <p class="overview-text">{{ p.description }}</p>
     </article>
 
+    <!-- Tech -->
     <article class="card">
-      <h2>Tech stack</h2>
-      <ul class="list">
-        <li *ngFor="let s of p.stack">{{ s }}</li>
+      <h3>Tech stack</h3>
+      <ul>
+        <li *ngFor="let tech of p.stack">{{ tech }}</li>
       </ul>
     </article>
 
+    <!-- Features -->
     <article class="card">
-      <h2>Highlights</h2>
-      <ul class="list">
+      <h3>Key features</h3>
+      <ul>
         <li *ngFor="let h of p.highlights">{{ h }}</li>
       </ul>
     </article>
 
-    <article class="card">
-      <h2>My role</h2>
-      <p class="desc">{{ p.role }}</p>
-    </article>
+    <!-- Case Study -->
+<article class="card case-study" *ngIf="p.problem || p.solution || p.technicalDecisions?.length">
+  <h3>Case study</h3>
 
-    <!-- ✅ ONLY FOR TEAMPULSE -->
-    <article class="card" *ngIf="p.id === 'teampulse'">
-      <h2>Technical decisions</h2>
-      <ul class="list">
-        <li>Real authentication with Sanctum + global Bearer token interceptor</li>
-        <li>UX-focused states: loading/errors and optimistic updates for tasks</li>
-      </ul>
-    </article>
+  <div class="case-block" *ngIf="p.problem">
+    <strong>Problem</strong>
+    <p>{{ p.problem }}</p>
+  </div>
+
+  <div class="case-block" *ngIf="p.solution">
+    <strong>Solution</strong>
+    <p>{{ p.solution }}</p>
+  </div>
+
+  <div class="case-block" *ngIf="p.technicalDecisions?.length">
+    <strong>Technical decisions</strong>
+    <ul>
+      <li *ngFor="let item of p.technicalDecisions">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+</article>
+
   </section>
+
 </main>
 
+<!--  NOT FOUND -->
 <ng-template #notFound>
-  <main class="wrap">
-    <h1>Project not found</h1>
-    <p class="muted">Go back to the list and select a valid project.</p>
-    <a class="btn" routerLink="/projects">Back</a>
-  </main>
+  <p>Project not found</p>
 </ng-template>
