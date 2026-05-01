@@ -1,7 +1,7 @@
 .wrap {
   max-width: 980px;
   margin: 0 auto;
-  padding: 32px 16px;
+  padding: 16px 16px 32px;;
 }
 
 /* Back link */
@@ -9,7 +9,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   color: #111827;
   text-decoration: none;
   font-weight: 700;
@@ -48,18 +48,18 @@ h1 {
   line-height: 1.5;
 }
 
-/* Links */
-.links {
+/* Actions */
+.actions {
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 14px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 14px;
+  padding: 10px 18px;
   border-radius: 12px;
   border: 1px solid #111827;
   background: #111827;
@@ -84,6 +84,7 @@ h1 {
   background: #fff;
   color: #111827;
   border-color: #e5e7eb;
+  min-width: 82px;
 }
 
 .btn.ghost:hover {
@@ -186,7 +187,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin: margin: 20px 0 30px;
+  margin: 20px 0 30px;
   align-items: center;
 }
 
@@ -211,7 +212,7 @@ h1 {
 
 .hero-image {
   width: 100%;
-  max-width: 720px;
+  max-width: 820px;
   max-height: 320px; 
   object-fit: contain;
   border-radius: 16px;
@@ -235,4 +236,84 @@ h1 {
 .case-block strong {
   display: block;
   margin-bottom: 6px;
+}
+
+/* Quick metrics */
+
+.metrics-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0 28px;
+}
+
+.metrics-strip span {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #e5e7eb;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.metrics-strip span:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+/* Architecture */
+
+.architecture-card {
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+}
+
+.architecture-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.arch-node {
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.arch-node:hover {
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.arch-node strong {
+  display: block;
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.arch-node span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.arch-arrow {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 8px 0;
 }

@@ -33,6 +33,13 @@
     </div>
   </header>
 
+  <!-- QUICK METRICS -->
+<section class="metrics-strip">
+  <span *ngFor="let tech of p.stack">
+    {{ tech }}
+  </span>
+</section>
+
   <!-- HERO -->
   <div class="hero-wrapper" *ngIf="p.image">
     <img
@@ -67,6 +74,32 @@
         <li *ngFor="let tech of p.stack">{{ tech }}</li>
       </ul>
     </article>
+
+    <!-- Architecture -->
+    <article class="card architecture-card" *ngIf="p.id === 'minicms'">
+    <h3>Architecture</h3>
+
+    <div class="architecture-flow">
+     <div class="arch-node">
+      <strong>React Frontend</strong>
+      <span>Vercel</span>
+     </div>
+
+    <div class="arch-arrow">↓</div>
+
+    <div class="arch-node">
+      <strong>Laravel API</strong>
+      <span>Render</span>
+    </div>
+
+    <div class="arch-arrow">↓</div>
+
+    <div class="arch-node">
+      <strong>PostgreSQL</strong>
+      <span>Render Database</span>
+    </div>
+   </div>
+  </article>
 
     <!-- Features -->
     <article class="card">
