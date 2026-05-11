@@ -123,21 +123,66 @@ export const PROJECTS: Project[] = [
 },
 
   {
-    id: "zimbabwe",
-    name: "Reino Zimbabwe",
-    tagline: "Client-oriented landing page with strong UI structure and visual consistency.",
-    description:
-      "Frontend project developed as a real client-style landing page: clear information hierarchy, polished UI, full responsiveness, and maintainable code structure. Designed to demonstrate visual judgment and execution quality.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    highlights: [
-      "Real-world client-style landing structure",
-      "Fully responsive design with clear visual hierarchy",
-      "Consistent UI components and section architecture",
-      "Clean and maintainable frontend code",
-    ],
-    role: "Frontend UI development (design implementation and structure).",
-    links: {
-      repo: "https://github.com/claudia-ma/reino-zimbabwe",
-    },
+   id: "zimbabwe",
+   name: "Reino Zimbabwe",
+   tagline:
+    "Premium responsive breeder platform focused on visual storytelling, modern UI systems and brand-driven UX.",
+
+   description:
+    "Modern Laravel + Tailwind web platform redesigned for a Chihuahua breeder brand. The project focuses on premium responsive design, polished UI/UX, reusable Blade architecture, mobile-first layouts and emotionally-driven brand presentation.",
+
+   image:
+    "images/reinozimbabwe/rz-responsive-showcase.png",
+
+   screens: [
+    "images/reinozimbabwe/rz-home-desktop.png",
+    "images/reinozimbabwe/rz-etica-desktop.png",
+    "images/reinozimbabwe/rz-testimonios-desktop.png",
+    "images/reinozimbabwe/rz-contacto-desktop.png",
+    "images/reinozimbabwe/rz-home-mobile.png",
+    "images/reinozimbabwe/rz-menu-mobile.png",
+   ],
+
+   stack: [
+    "Laravel",
+    "Blade",
+    "Tailwind CSS",
+    "Responsive Design",
+    "UI/UX Design"
+  ],
+
+  highlights: [
+    "Premium responsive redesign for a real client-oriented brand",
+    "Modern mobile-first navigation and responsive layouts",
+    "Reusable Blade component structure",
+    "Consistent design system using Tailwind CSS",
+    "Improved visual hierarchy and spacing system",
+    "Responsive UI optimized for desktop and mobile experiences",
+    "Brand-focused storytelling with premium aesthetic direction",
+    "Polished sections for puppies, philosophy, testimonials and contact flows"
+  ],
+
+  role:
+    "Frontend & UI Developer",
+
+  problem:
+    "The original website lacked visual consistency, premium presentation and responsive UX structure. The goal was to redesign the platform into a modern, trustworthy and emotionally engaging brand experience.",
+
+  solution:
+    "I redesigned the entire frontend experience using Laravel Blade and Tailwind CSS, creating a cleaner visual hierarchy, responsive layouts, reusable UI sections and a more polished brand-focused presentation across desktop and mobile devices.",
+
+  technicalDecisions: [
+    "Built the interface using Laravel Blade and reusable layout structures",
+    "Used Tailwind CSS to create a scalable and consistent design system",
+    "Focused heavily on responsive spacing, typography and mobile UX",
+    "Implemented premium card layouts, visual hierarchy and soft interaction patterns",
+    "Designed the experience around trust, warmth and modern brand presentation",
+    "Optimized layouts for both desktop and mobile-first navigation flows"
+   ],
+
+   links: {
+    live: "",
+    repo: "https://github.com/claudia-ma/reino-zimbabwe",
+   },
   },
-];
+]
